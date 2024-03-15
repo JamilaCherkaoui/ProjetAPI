@@ -1,0 +1,130 @@
+/* Importation des polices Google */
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+
+.app {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start; /* Align the content to the top */
+  min-height: 100vh;
+  background: #1e1e1e url('stars_background.png') repeat;
+  color: white;
+  padding-top: 20px; /* Adjust the space on top */
+}
+
+.app-header {
+  width: 100%;
+  text-align: center;
+  margin-top: 0; /* Remove margin-top to move the title up */
+  margin-bottom: 50px; /* Provide space between title and content */
+}
+
+.app-header h1 {
+  font-family: 'Roboto', sans-serif;
+  font-size: 3rem; /* Increase the size of the title */
+  color: #E3F2FD;
+  text-shadow: 0px 0px 10px rgba(255, 255, 255, 0.7);
+}
+
+.content {
+  display: flex;
+  justify-content: space-around; /* Uniform spacing */
+  align-items: start; /* Align items to the start */
+  width: 100%;
+  max-width: 1200px;
+  gap: 20px; /* Space between elements */
+}
+
+.moon-container {
+  width: 300px; /* Increase the size of the moon */
+  margin-top: 2rem; /* Adjust top margin */
+}
+
+.moon-rotation {
+  width: 100%; /* Moon takes full width of the container */
+  animation: spin infinite 60s linear;
+}
+
+.moon-info {
+  font-family: 'Merriweather', serif;
+  font-size: 1.4rem; /* Increase the font size */
+  color: #ffffff;
+  text-align: center;
+  margin-top: 1rem;
+  background-color: rgba(0, 0, 0, 0.5);
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.7);
+}
+
+.quote-container {
+flex-grow: 1;
+margin: 2rem;
+text-align: center;
+display: flex;
+flex-direction: column;
+justify-content: center;
+}
+
+.quote {
+font-family: 'Merriweather', serif;
+font-size: 1.5rem;
+color: #ddd;
+margin: 0;
+background-color: rgba(0, 0, 0, 0.6);
+padding: 20px;
+border-radius: 10px;
+box-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+.button {
+padding: 10px 20px;
+font-size: 1rem;
+margin-top: 20px;
+background-color: #4caf50;
+color: white;
+border: none;
+border-radius: 5px;
+cursor: pointer;
+transition: background-color 0.3s;
+}
+
+.button:hover {
+background-color: #43a047;
+}
+
+.telescope-container {
+  position: absolute; /* Positionnement absolu par rapport au conteneur parent */
+  left: 60px; /* Distance du côté gauche de l'écran */
+  bottom: 90px; /* Distance du bas de l'écran */
+  width: 250px; /* Largeur du conteneur du télescope */
+  z-index: 10; /* S'assurer que le télescope est au-dessus des autres éléments */
+}
+
+.telescope-animation {
+  width: 100%; /* Le télescope prendra la largeur de son conteneur */
+  animation: moveUpDown 5s ease-in-out infinite; /* Ajuster le temps d'animation si nécessaire */
+}
+
+/* Keyframes for the animations */
+@keyframes spin {
+from { transform: rotate(0deg); }
+to { transform: rotate(360deg); }
+}
+
+@keyframes moveUpDown {
+0%, 100% { transform: translateY(0); }
+50% { transform: translateY(10px); }
+}
+
+@keyframes glow {
+0% { text-shadow: 0 0 8px #fff; }
+100% { text-shadow: 0 0 20px #fff, 0 0 30px #ff78, 0 0 40px #ff78; }
+}
+
+
+
+
+
+
