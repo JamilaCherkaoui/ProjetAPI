@@ -24,7 +24,7 @@ jobs:
     - name: Run backend tests
       run: cd backend && npm test
 
-  frontend:
+  front:
     runs-on: ubuntu-latest
 
     steps:
@@ -35,12 +35,12 @@ jobs:
         node-version: 20.x
         cache: 'npm'
 
-    - name: Install frontend dependencies
-      run: cd frontend && npm install
+    - name: Install front dependencies
+      run: cd front && npm install
 
-    - name: Build frontend
-      run: cd frontend && npm run build
+    - name: Build front
+      run: cd front && npm run build
 
-    - name: Run frontend tests
-      run: cd frontend && npm test
+    - name: Run front tests
+      run: cd front && npm test
 
