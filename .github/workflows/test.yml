@@ -26,12 +26,12 @@ jobs:
       run: |
         cd backend
         npm install
-       # npm test
+        npm test
 
     - name: Install dependencies and build front
       run: |
         cd front
         npm install
         npm run build
-       # npm test
+        npm test
 
