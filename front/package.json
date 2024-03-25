@@ -38,5 +38,8 @@
       "last 1 safari version"
     ]
   },
-  "proxy": "https://zenquotes.io"
+  "proxy": "https://zenquotes.io",
+  "devDependencies": {
+    "@babel/plugin-proposal-private-property-in-object": "^7.21.11"
+  }
 }

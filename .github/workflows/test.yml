@@ -22,16 +22,26 @@ jobs:
       with:
         node-version: ${{ matrix.node-version }}
 
-    - name: Install dependencies and run tests in Backend
+    - name: Install dependencies in Backend
       run: |
         cd backend
         npm install
-        npm test
 
-    - name: Install dependencies and build front
+    - name: Run tests in Backend
+      run: |
+        cd backend
+        npm test
+      env:
+        CI: true
+
+    - name: Install dependencies in Frontend
       run: |
         cd front
         npm install
-        npm run build
-        npm test
+
+    - name: Build and test Frontend
+      run: |
+        cd front
+        CI=false npm run build
+        CI=true npm test
 
