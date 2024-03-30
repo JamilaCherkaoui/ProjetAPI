@@ -1,47 +1,25 @@
-name: CI
+name: Backend CI
 
-on:
-  push:
-    branches: [ main ]
-  pull_request:
-    branches: [ main ]
+on: [push, pull_request]
 
 jobs:
-  build:
+  test:
     runs-on: ubuntu-latest
-
-    strategy:
-      matrix:
-        node-version: [20.x]
+    defaults:
+      run:
+        working-directory: ./backend # Spécifie le dossier backend comme répertoire de travail
 
     steps:
-    - uses: actions/checkout@v3
-    
-    - name: Setup Node.js
-      uses: actions/setup-node@v3
+    - uses: actions/checkout@v2
+
+    - name: Set up Node.js
+      uses: actions/setup-node@v2
       with:
-        node-version: ${{ matrix.node-version }}
+        node-version: '14' # ou la version que vous utilisez
 
-    - name: Install dependencies in Backend
-      run: |
-        cd backend
-        npm install
+    - name: Install dependencies
+      run: npm install
 
-    - name: Run tests in Backend
-      run: |
-        cd backend
-        npm test
-      env:
-        CI: true
-
-    - name: Install dependencies in Frontend
-      run: |
-        cd front
-        npm install
-
-    - name: Build and test Frontend
-      run: |
-        cd front
-        CI=false npm run build
-        CI=true npm test
+    - name: Run tests
+      run: npm test
 

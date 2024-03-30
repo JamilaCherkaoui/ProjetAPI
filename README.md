@@ -4,6 +4,14 @@ Création d'une application qui interagit avec deux API différentes afin d'affi
 Bien démarrer avec Create React App
 Ce projet a été initialisé avec Create React App.
 
+Fonctionnalités
+Affichage des phases de la lune : Utilise l'API FarmSense pour afficher les phases actuelles de la lune.
+Affichage de citations inspirantes : Utilise l'API ZenQuotes pour afficher une citation inspirante aléatoire.
+
+Installation
+Clonez ce dépôt sur votre machine locale et naviguez dans le dossier du projet. Exécutez les commandes suivantes pour installer les dépendances nécessaires pour le frontend et le backend (si applicable).
+npm install
+
 Scripts disponibles
 Dans le répertoire du projet, vous pouvez exécuter :
 
@@ -38,3 +46,6 @@ Vous n'avez pas à utiliser eject. L'ensemble de fonctionnalités proposées est
 
 Pour en savoir plus
 Vous pouvez en apprendre davantage dans la documentation de Create React App.
+
+Utilisation
+Aucune configuration spécifique pour les clés API n'est nécessaire pour ce projet, car les services utilisés ne requièrent pas d'authentification par clé API.

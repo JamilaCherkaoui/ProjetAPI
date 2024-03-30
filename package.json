@@ -1,0 +1,21 @@
+{
+  "name": "projetapi",
+  "version": "1.0.0",
+  "description": "Une application full stack qui interagit avec deux API différentes pour afficher les phases de la lune et des citations inspirantes.",
+  "main": "index.js",
+  "scripts": {
+    "start": "concurrently \"cd backend && npm start\" \"cd front && npm start\"",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "fullstack",
+    "api",
+    "node",
+    "react"
+  ],
+  "author": "Votre Nom",
+  "license": "ISC",
+  "devDependencies": {
+    "concurrently": "^6.0.0"
+  }
+}
