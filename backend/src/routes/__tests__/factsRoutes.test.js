@@ -1,5 +1,5 @@
 import request from 'supertest';
-import app from '../../app'; // Assurez-vous que le chemin est correct
+import app from '../../app'; 
 
 describe('GET /api/interesting-fact', () => {
   it('responds with a fact', async () => {

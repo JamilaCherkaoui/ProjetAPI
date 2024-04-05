@@ -54,3 +54,6 @@ export default router;
 
 // 1710463024
 // 1672444800
+//la pagination n'est pas utile ici  
+//car on a pas un grand nombre d'éléments à 
+//retourner et qu'on ne souhaite les diviser en plusieurs "pages" de résultats pour faciliter la navigation et l'affichage. 

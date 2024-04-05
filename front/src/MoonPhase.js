@@ -7,7 +7,7 @@ function MoonPhase() {
 
     useEffect(() => {
         const fetchMoonPhaseData = () => {
-            fetch('http://localhost:3001/api/moon-phase') // Assurez-vous que cette URL est correcte
+            fetch('http://localhost:3001/api/moon-phase') 
                 .then(response => response.json())
                 .then(data => {
                     setMoonData({
@@ -21,7 +21,7 @@ function MoonPhase() {
                 });
         };
 
-        fetchMoonPhaseData(); // Exécuter immédiatement lors du montage du composant
+        fetchMoonPhaseData(); 
         const intervalId = setInterval(fetchMoonPhaseData, 3600000); // Rafraîchir toutes les heures
 
         return () => clearInterval(intervalId); // Nettoyer l'intervalle lors du démontage du composant

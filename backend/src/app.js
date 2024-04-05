@@ -19,7 +19,7 @@ const swaggerOptions = {
       description: 'Documentation de mon API',
     },
   },
-  apis: ['./src/routes/*.js'], // Assurez-vous que ce chemin correspond à l'emplacement de vos fichiers de route
+  apis: ['./src/routes/*.js'], 
 };
 
 const swaggerDocs = swaggerJSDoc(swaggerOptions);
